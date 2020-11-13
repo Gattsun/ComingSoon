@@ -26,4 +26,10 @@ const interval = setInterval(() => {
     <div><span> ${seconds} seconds</span></div>
     `;
 
+    if(timeLeft < 0) {
+        clearInterval(interval);
+        countdown.innerHTML = "Launched!"
+    }
+    
 }, 1000);
+
